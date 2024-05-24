@@ -1,5 +1,8 @@
-﻿using System;
+﻿using BreadyToomys.Controlers;
+using BreadyToomys.Models;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,12 +23,22 @@ namespace BreadyToomys.Views
     /// </summary>
     public partial class Menu : Page
     {
+        private List<Product> products;
         public Menu()
         {
             InitializeComponent();
+            products = (new Product()).Read();
+            foreach (var product in products)
+            {
+                Debug.WriteLine($"Id: {product.Id}, Name: {product.Name}, Description: {product.Description}, Type: {product.Type}, Price: {product.Price}, Picture: {product.Picture}");
+            }
+            if (productsListView != null)
+            {
+                productsListView.ItemsSource = products;
+            }
         }
 
-        private void newOrderButton_Click(object sender, RoutedEventArgs e)
+        private void seeCart_Click(object sender, RoutedEventArgs e)
         {
 
         }

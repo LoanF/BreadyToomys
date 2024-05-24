@@ -8,7 +8,25 @@
       Title="Menu" Height="900" Width="450" Background="#FFEE8D3C">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Margin="169,-84,0,727" Width="108" Source="/Views/Images/logo.png" RenderTransformOrigin="-0.953,-0.715" Panel.ZIndex="10"/>
+        <ListView Name="productsListView" Margin="10" Background="#FFEE8D3C">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <!-- Image du produit -->
+                        <Image Source="{Binding Picture}" Width="50" Height="50" Margin="5"/>
+                        <!-- Détails du produit -->
+                        <StackPanel Orientation="Vertical" Width="200">
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14"/>
+                            <TextBlock Text="{Binding Price, StringFormat=C}" FontSize="12"/>
+                        </StackPanel>
+                        <!-- Bouton Ajouter au panier -->
+                        <Button Content="Ajouter au panier" Width="120" Margin="5"
+                                Click="AddToCartButton_Click"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--<Image HorizontalAlignment="Left" Margin="169,-84,0,727" Width="108" Source="/Views/Images/logo.png" RenderTransformOrigin="-0.953,-0.715" Panel.ZIndex="10"/>
         <Rectangle HorizontalAlignment="Center" Height="119" Stroke="#FF5D2A2A" VerticalAlignment="Top" Width="450" Fill="#FF5D2A2A" Margin="0,-18,0,0"/>
         <Image HorizontalAlignment="Left" Height="50" Margin="342,19,0,0" VerticalAlignment="Top" Width="50" Source="/Views/Images/cart.png"/>
         <Image HorizontalAlignment="Left" Height="20" Margin="373,15,0,0" VerticalAlignment="Top" Width="20" Source="/Views/Images/Red_Circle_full.png"/>
@@ -31,7 +49,7 @@
         <Image HorizontalAlignment="Left" Height="81" Margin="281,573,0,0" VerticalAlignment="Top" Width="115" Source="/Views/Images/burger6.jpeg" Stretch="Fill" Panel.ZIndex="100"/>
         <Rectangle HorizontalAlignment="Left" Height="157" Margin="249,555,0,0" Stroke="#FFEE8D3C" VerticalAlignment="Top" Width="174" Fill="#FFF1AB70"/>
         <Label Content="CLASIC CHEESE" HorizontalAlignment="Left" Margin="278,668,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Black"/>
-        <Button x:Name="newOrderButton" Content="VOIR LE PANIER" HorizontalAlignment="Center" Margin="0,802,0,0" VerticalAlignment="Top" Width="450" Background="#FF1BAB06" Height="100" Click="newOrderButton_Click" FontFamily="Arial Black" FontSize="24" Foreground="#FFD4E06A"/>
+        <Button x:Name="seeCart" Content="VOIR LE PANIER" HorizontalAlignment="Center" Margin="0,802,0,0" VerticalAlignment="Top" Width="450" Background="#FF1BAB06" Height="100" Click="seeCart_Click" FontFamily="Arial Black" FontSize="24" Foreground="#FFD4E06A"/>-->
 
     </Grid>
 </Page>

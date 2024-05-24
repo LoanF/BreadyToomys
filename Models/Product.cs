@@ -12,6 +12,8 @@ namespace BreadyToomys.Models
         public decimal Price { get; set; }
         public string? Picture { get; set; }
 
+        private DatabaseManager dbManager = new DatabaseManager();
+
         public void Create(DatabaseManager dbManager)
         {
             string query = "INSERT INTO Product (Id, Name, Description, Type, Price, Picture) VALUES (@Id, @Name, @Description, @Type, @Price, @Picture)";
@@ -30,29 +32,42 @@ namespace BreadyToomys.Models
             }
         }
 
-        public void Read(DatabaseManager dbManager, int id)
+        public List<Product> Read(int? id = null)
         {
-            string query = "SELECT * FROM Product WHERE Id = @Id";
+            List<Product> products = new List<Product>();
+            string query = id != null ? "SELECT * FROM Product WHERE Id = @Id" : "SELECT * FROM Product";
 
-            if (dbManager.OpenConnection())
+            if (this.dbManager.OpenConnection())
             {
-                MySqlCommand cmd = new MySqlCommand(query, dbManager.Connection);
-                cmd.Parameters.AddWithValue("@Id", id);
+                MySqlCommand cmd = new MySqlCommand(query, this.dbManager.Connection);
+
+                if (id != null)
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                }
+
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                if (dataReader.Read())
+                while (dataReader.Read())
                 {
-                    Id = Convert.ToInt32(dataReader["Id"]);
-                    Name = dataReader["Name"].ToString();
-                    Description = dataReader["Description"].ToString();
-                    Type = dataReader["Type"].ToString();
-                    Price = Convert.ToDecimal(dataReader["Price"]);
-                    Picture = dataReader["Picture"].ToString();
+                    Product product = new Product
+                    {
+                        Id = Convert.ToInt32(dataReader["Id"]),
+                        Name = dataReader["Name"].ToString(),
+                        Description = dataReader["Description"].ToString(),
+                        Type = dataReader["Type"].ToString(),
+                        Price = Convert.ToDecimal(dataReader["Price"]),
+                        Picture = dataReader["Picture"].ToString()
+                    };
+
+                    products.Add(product);
                 }
 
                 dataReader.Close();
-                dbManager.CloseConnection();
+                this.dbManager.CloseConnection();
             }
+
+            return products;
         }
 
         public void Update(DatabaseManager dbManager)

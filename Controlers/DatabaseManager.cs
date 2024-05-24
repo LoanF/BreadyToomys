@@ -6,6 +6,7 @@ namespace BreadyToomys.Controlers
     {
         private MySqlConnection? connection;
         private string? server;
+        private string? port;
         private string? database;
         private string? uid;
         private string? password;
@@ -20,12 +21,13 @@ namespace BreadyToomys.Controlers
         private void Initialize()
         {
             server = "87.106.205.180";
+            port = "45783";
             database = "BreadyToomyDB";
             uid = "bready";
             password = "X6f$!E$LEN6c9$dP";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";" + "PORT=" + port + ";";
 
             connection = new MySqlConnection(connectionString);
         }
