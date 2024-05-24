@@ -22,7 +22,12 @@ namespace BreadyToomys.Views
     {
         public Home()
         {
-            InitializeComponent();
+            InitializeComponent();  
+        }
+
+        private void newOrderButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

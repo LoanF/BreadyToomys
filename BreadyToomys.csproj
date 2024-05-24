@@ -10,8 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="burger.png" />
     <None Remove="Design sans titre.png" />
+    <None Remove="Views\burgers.png" />
+    <None Remove="Views\burgers.pngZone.Identifier" />
     <None Remove="Views\Design sans titre.png" />
+    <None Remove="Views\Images\burgers.pngZone.Identifier" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,13 +23,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Views\Images\burgers.png" />
+    <Resource Include="burger.png" />
+    <Resource Include="Views\burgers.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Update=".xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Images\" />
   </ItemGroup>
 
 </Project>

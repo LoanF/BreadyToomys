@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BreadyToomys"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="450">
+        Title="BreadyToomy's" Width="450" Height="932" ResizeMode="NoResize" Icon="/burger.png">
     <Grid>
-        <Frame x:Name="mainFrame" Content="Frame"/>
+        <Frame x:Name="mainFrame"/>
     </Grid>
 </Window>
