@@ -1,0 +1,37 @@
+﻿<Page x:Class="BreadyToomys.Views.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BreadyToomys.Views"
+      mc:Ignorable="d" 
+      Title="Menu" Height="900" Width="450" Background="#FFEE8D3C">
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Margin="169,-84,0,727" Width="108" Source="/Views/Images/logo.png" RenderTransformOrigin="-0.953,-0.715" Panel.ZIndex="10"/>
+        <Rectangle HorizontalAlignment="Center" Height="119" Stroke="#FF5D2A2A" VerticalAlignment="Top" Width="450" Fill="#FF5D2A2A" Margin="0,-18,0,0"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="342,19,0,0" VerticalAlignment="Top" Width="50" Source="/Views/Images/cart.png"/>
+        <Image HorizontalAlignment="Left" Height="20" Margin="373,15,0,0" VerticalAlignment="Top" Width="20" Source="/Views/Images/Red_Circle_full.png"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="375,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="67,191,0,0" VerticalAlignment="Top" Width="115" Source="/Views/Images/burger1.jpeg" Stretch="Fill" Panel.ZIndex="10"/>
+        <Rectangle HorizontalAlignment="Left" Height="157" Margin="37,173,0,0" Stroke="#FFEE8D3C" VerticalAlignment="Top" Width="175" Fill="#FFF1AB70"/>
+        <Label Content="BIG ONIONS" HorizontalAlignment="Left" Margin="77,286,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Black"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="281,191,0,0" VerticalAlignment="Top" Width="115" Source="/Views/Images/burger2.jpeg" Stretch="Fill" Panel.ZIndex="100"/>
+        <Rectangle HorizontalAlignment="Left" Height="157" Margin="249,173,0,0" Stroke="#FFEE8D3C" VerticalAlignment="Top" Width="174" Fill="#FFF1AB70"/>
+        <Label Content="DOUBLE CHEESE" HorizontalAlignment="Left" Margin="278,286,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Black"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="67,377,0,0" VerticalAlignment="Top" Width="115" Source="/Views/Images/burger3.jpeg" Stretch="Fill" Panel.ZIndex="10"/>
+        <Rectangle HorizontalAlignment="Left" Height="157" Margin="37,359,0,0" Stroke="#FFEE8D3C" VerticalAlignment="Top" Width="175" Fill="#FFF1AB70"/>
+        <Label Content="MEGA CHEESY" HorizontalAlignment="Left" Margin="71,472,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Black"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="281,377,0,0" VerticalAlignment="Top" Width="115" Source="/Views/Images/burger4.jpeg" Stretch="Fill" Panel.ZIndex="100"/>
+        <Rectangle HorizontalAlignment="Left" Height="157" Margin="249,359,0,0" Stroke="#FFEE8D3C" VerticalAlignment="Top" Width="174" Fill="#FFF1AB70"/>
+        <Label Content="CHICKEN BEEF" HorizontalAlignment="Left" Margin="284,472,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Black"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="67,573,0,0" VerticalAlignment="Top" Width="115" Source="/Views/Images/burger5.jpeg" Stretch="Fill" Panel.ZIndex="10"/>
+        <Rectangle HorizontalAlignment="Left" Height="157" Margin="37,555,0,0" Stroke="#FFEE8D3C" VerticalAlignment="Top" Width="175" Fill="#FFF1AB70"/>
+        <Label Content="BLUE BURGER" HorizontalAlignment="Left" Margin="73,668,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Black"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="281,573,0,0" VerticalAlignment="Top" Width="115" Source="/Views/Images/burger6.jpeg" Stretch="Fill" Panel.ZIndex="100"/>
+        <Rectangle HorizontalAlignment="Left" Height="157" Margin="249,555,0,0" Stroke="#FFEE8D3C" VerticalAlignment="Top" Width="174" Fill="#FFF1AB70"/>
+        <Label Content="CLASIC CHEESE" HorizontalAlignment="Left" Margin="278,668,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Black"/>
+        <Button x:Name="newOrderButton" Content="VOIR LE PANIER" HorizontalAlignment="Center" Margin="0,802,0,0" VerticalAlignment="Top" Width="450" Background="#FF1BAB06" Height="100" Click="newOrderButton_Click" FontFamily="Arial Black" FontSize="24" Foreground="#FFD4E06A"/>
+
+    </Grid>
+</Page>

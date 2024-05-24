@@ -1,40 +1,57 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows7.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
-    <EnableWindowsTargeting>true</EnableWindowsTargeting>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<EnableWindowsTargeting>true</EnableWindowsTargeting>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="burger.png" />
-    <None Remove="Design sans titre.png" />
-    <None Remove="Views\burgers.png" />
-    <None Remove="Views\burgers.pngZone.Identifier" />
-    <None Remove="Views\Design sans titre.png" />
-    <None Remove="Views\Images\burgers.pngZone.Identifier" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="burger.png" />
+		<None Remove="Design sans titre.png" />
+		<None Remove="Views\833314.png" />
+		<None Remove="Views\addToCart.png" />
+		<None Remove="Views\burger1.jpeg" />
+		<None Remove="Views\burger3.jpeg" />
+		<None Remove="Views\burger4.jpeg" />
+		<None Remove="Views\burger5.jpeg" />
+		<None Remove="Views\burger6.jpeg" />
+		<None Remove="Views\burgers.png" />
+		<None Remove="Views\Design sans titre.png" />
+		<None Remove="Views\logo.png" />
+		<None Remove="Views\Red_Circle_full.png" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.4.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MySql.Data" Version="8.4.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="burger.png" />
-    <Resource Include="Views\burgers.png" />
-  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="Views\Images\burger3.jpeg" />
+		<Resource Include="Views\Images\burger4.jpeg" />
+		<Resource Include="Views\Images\burger5.jpeg" />
+		<Resource Include="Views\Images\burger6.jpeg" />
+		<Resource Include="Views\Images\addToCart.png" />
+		<Resource Include="Views\Images\burger1.jpeg" />
+		<Resource Include="Views\Images\burger2.jpeg" />
+		<Resource Include="Views\Images\cart.png" />
+		<Resource Include="Views\Images\logo.png" />
+		<Resource Include="Views\Images\Red_Circle_full.png" />
+		<Resource Include="burger.png" />
+		<Resource Include="Views\burgers.png" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Page Update=".xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-    </Page>
-  </ItemGroup>
+	<ItemGroup>
+		<Page Update=".xaml">
+			<XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+		</Page>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Images\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Views\Images\" />
+	</ItemGroup>
 
 </Project>
