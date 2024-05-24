@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="450"
       Title="Home" Width="450" Height="900">
-    
     <Page.Background>
         <ImageBrush ImageSource="/Views/burgers.png"/>
     </Page.Background>

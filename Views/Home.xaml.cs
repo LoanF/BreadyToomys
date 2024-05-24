@@ -27,7 +27,7 @@ namespace BreadyToomys.Views
 
         private void newOrderButtonClick(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Menu());
         }
     }
 }

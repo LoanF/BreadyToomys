@@ -20,7 +20,9 @@
 		<None Remove="Views\burger5.jpeg" />
 		<None Remove="Views\burger6.jpeg" />
 		<None Remove="Views\burgers.png" />
+		<None Remove="Views\burgers.pngZone.Identifier" />
 		<None Remove="Views\Design sans titre.png" />
+		<None Remove="Views\Images\burgers.pngZone.Identifier" />
 		<None Remove="Views\logo.png" />
 		<None Remove="Views\Red_Circle_full.png" />
 	</ItemGroup>
@@ -30,6 +32,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Resource Include="Views\burgers.png" />
 		<Resource Include="Views\Images\burger3.jpeg" />
 		<Resource Include="Views\Images\burger4.jpeg" />
 		<Resource Include="Views\Images\burger5.jpeg" />
@@ -41,17 +44,12 @@
 		<Resource Include="Views\Images\logo.png" />
 		<Resource Include="Views\Images\Red_Circle_full.png" />
 		<Resource Include="burger.png" />
-		<Resource Include="Views\burgers.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Page Update=".xaml">
 			<XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
 		</Page>
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="Views\Images\" />
 	</ItemGroup>
 
 </Project>
