@@ -8,7 +8,7 @@ namespace BreadyToomys.Models
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
-        public virtual required List<RecipeStep> Steps { get; set; }
+        public virtual List<RecipeStep> Steps { get; set; } = new List<RecipeStep>();
 
         public void AddStep(RecipeStep step)
         {
