@@ -16,23 +16,28 @@ using System.Windows.Shapes;
 namespace BreadyToomys.Views
 {
     /// <summary>
-    /// Logique d'interaction pour Home.xaml
+    /// Logique d'interaction pour Gestion.xaml
     /// </summary>
-    public partial class Home : Page
+    public partial class Gestion : Page
     {
-        public Home()
+        public Gestion()
         {
-            InitializeComponent();  
+            InitializeComponent();
         }
 
-        private void btnOrderClick(object sender, RoutedEventArgs e)
+        private void btnHomeClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu());
+            NavigationService.Navigate(new Home());
         }
 
-        private void btnAdministrationClick(object sender, RoutedEventArgs e)
+        private void btnAlimentClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Gestion());
+            NavigationService.Navigate(new Aliments());
+        }
+
+        private void btnRecetteClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

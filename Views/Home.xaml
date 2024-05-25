@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BreadyToomys.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="450"
       Title="Home" Width="450" Height="900">
     <Page.Background>
         <ImageBrush ImageSource="/Views/burgers.png"/>
     </Page.Background>
 
     <Grid x:Name="homeGrid">
-        <Button x:Name="newOrderButton" Content="NOUVELLE COMMANDE" HorizontalAlignment="Center" VerticalAlignment="Top" Width="450" Background="#FF1BAB06" Height="100" Click="newOrderButtonClick" FontFamily="Arial Black" FontSize="18" Foreground="#FFD4E06A" Margin="0,800,0,0"/>
+        <Button x:Name="btnAdministration" Content="ACCES GESTION" HorizontalAlignment="Center" VerticalAlignment="Top" Width="450" Background="#FFF95B5B" Height="50" FontFamily="Arial Black" FontSize="14" Foreground="White" Margin="0,743,0,0" Click="btnAdministrationClick"/>
+        <Button x:Name="btnOrder" Content="PRISE DE COMMANDE" HorizontalAlignment="Center" VerticalAlignment="Top" Width="450" Background="#FF1BAB06" Height="100" Click="btnOrderClick" FontFamily="Arial Black" FontSize="18" Foreground="#FFD4E06A" Margin="0,800,0,0"/>
     </Grid>
 </Page>
